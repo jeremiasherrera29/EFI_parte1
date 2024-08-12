@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-dark {
+    background-color: orange !important;
+}
+
+.nav-link {
+    color: white !important;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    background-color: darkblue;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.action-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    display: inline-block;
+}
+
+.action-button:hover {
+    background-color: darkblue;
+}
+
+.module-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.module {
+    margin: 1rem;
+}

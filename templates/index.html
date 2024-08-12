@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Módulos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: orange;">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_equipo') }}">Equipos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_modelo') }}">Modelos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_marca') }}">Marcas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_fabricante') }}">Fabricantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_caracteristica') }}">Características</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_stock') }}">Stocks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_proveedor') }}">Proveedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-primary text-white" href="{{ url_for('manage_accesorio') }}">Accesorios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        {% block content %}
+        <h2>Gestión de Registros</h2>
+        <div class="module-container">
+            <div class="module">
+                <h3>Equipos</h3>
+                <a href="{{ url_for('manage_equipo') }}" class="action-button">Ver Registros</a>
+            </div>
+            <div class="module">
+                <h3>Modelos</h3>
+                <a href="{{ url_for('manage_modelo') }}" class="action-button">Ver Registros</a>
+            </div>
+            <div class="module">
+                <h3>Características</h3>
+                <a href="{{ url_for('manage_caracteristica') }}" class="action-button">Ver Registros</a>
+            </div>
+        </div>
+        <h3>Fabricante</h3>
+        <a href="{{ url_for('manage_fabricante') }}" class="action-button">Ver Registros</a>
+        <h3>Características</h3>
+        <a href="{{ url_for('manage_caracteristica') }}" class="action-button">Ver Registros</a>
+        <h3>Stocks</h3>
+        <a href="{{ url_for('manage_stock') }}" class="action-button">Ver Registros</a>
+        <h3>Proveedor</h3>
+        <a href="{{ url_for('manage_proveedor') }}" class="action-button">Ver Registros</a>
+        <h3>Accesorios</h3>
+        <a href="{{ url_for('manage_accesorio') }}" class="action-button">Ver Registros</a>
+        {% endblock %}
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

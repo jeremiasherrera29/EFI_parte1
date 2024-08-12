@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Editar Característica</h1>
+<form method="post">
+    <label for="tipo">Tipo de Característica:</label>
+    <input type="text" id="tipo" name="tipo" value="{{ caracteristica.tipo }}">
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion" value="{{ caracteristica.descripcion }}">
+    <button type="submit">Guardar Cambios</button>
+</form>
+{% endblock %}

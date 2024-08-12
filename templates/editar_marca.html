@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Editar Marca</h1>
+<form method="post">
+    <label for="nombre_categoria">Nombre de la Marca:</label>
+    <input type="text" id="nombre_categoria" name="nombre_categoria" value="{{ marca.nombre_categoria }}">
+    <button type="submit">Guardar Cambios</button>
+</form>
+{% endblock %}

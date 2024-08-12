@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Editar Stock</h1>
+<form method="post">
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" value="{{ stock.cantidad }}">
+    <label for="ubicacion">Ubicación:</label>
+    <input type="text" id="ubicacion" name="ubicacion" value="{{ stock.ubicacion }}">
+    <button type="submit">Guardar Cambios</button>
+</form>
+{% endblock %}

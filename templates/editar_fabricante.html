@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Editar Fabricante</h1>
+<form method="post">
+    <label for="nombre">Nombre del Fabricante:</label>
+    <input type="text" id="nombre" name="nombre" value="{{ fabricante.nombre }}">
+    <label for="pais_origen">País de Origen:</label>
+    <input type="text" id="pais_origen" name="pais_origen" value="{{ fabricante.pais_origen }}">
+    <button type="submit">Guardar Cambios</button>
+</form>
+{% endblock %}

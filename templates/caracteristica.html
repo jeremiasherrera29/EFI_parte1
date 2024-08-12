@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Gestión de Características</h1>
+<form method="post">
+    <label for="tipo">Tipo de Característica:</label>
+    <input type="text" id="tipo" name="tipo">
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion">
+    <button type="submit">Guardar</button>
+</form>
+<table>
+    <tr>
+        <th>Tipo</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+    </tr>
+    {% for caracteristica in caracteristicas %}
+    <tr>
+        <td>{{ caracteristica.tipo }}</td>
+        <td>{{ caracteristica.descripcion }}</td>
+        <td>
+            <a href="{{ url_for('editar_caracteristica', id=caracteristica.id) }}">Editar</a>
+            <a href="{{ url_for('borrar_caracteristica', id=caracteristica.id) }}">Borrar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

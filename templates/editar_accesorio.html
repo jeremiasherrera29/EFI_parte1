@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Editar Accesorio</h1>
+<form method="post">
+    <label for="tipo">Tipo de Accesorio:</label>
+    <input type="text" id="tipo" name="tipo" value="{{ accesorio.tipo }}">
+    <label for="compatible_modelo_id">ID del Modelo Compatible:</label>
+    <input type="number" id="compatible_modelo_id" name="compatible_modelo_id" value="{{ accesorio.compatible_modelo_id }}">
+    <button type="submit">Guardar Cambios</button>
+</form>
+{% endblock %}

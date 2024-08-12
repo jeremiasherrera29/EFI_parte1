@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Gestión de Equipos</h1>
+<form method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" name="modelo">
+    <label for="categoria">Categoría:</label>
+    <input type="text" id="categoria" name="categoria">
+    <label for="costo">Costo:</label>
+    <input type="number" id="costo" name="costo" step="0.01">
+    <button type="submit">Guardar</button>
+</form>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Modelo</th>
+        <th>Categoría</th>
+        <th>Costo</th>
+        <th>Acciones</th>
+    </tr>
+    {% for equipo in equipos %}
+    <tr>
+        <td>{{ equipo.nombre }}</td>
+        <td>{{ equipo.modelo }}</td>
+        <td>{{ equipo.categoria }}</td>
+        <td>{{ equipo.costo }}</td>
+        <td>
+            <a href="{{ url_for('editar_equipo', id=equipo.id) }}">Editar</a>
+            <a href="{{ url_for('borrar_equipo', id=equipo.id) }}">Borrar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

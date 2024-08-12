@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Editar Modelo</h1>
+<form method="post">
+    <label for="nombre_modelo">Nombre del Modelo:</label>
+    <input type="text" id="nombre_modelo" name="nombre_modelo" value="{{ modelo.nombre_modelo }}" required>
+    <label for="fabricante_id">ID del Fabricante:</label>
+    <input type="number" id="fabricante_id" name="fabricante_id" value="{{ modelo.fabricante_id }}" required>
+    <button type="submit">Guardar Cambios</button>
+</form>
+{% endblock %}
